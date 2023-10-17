@@ -39,5 +39,5 @@ public class ProductController {
         }
     }
 
-    // Other endpoints for product operations
+
 }
