@@ -24,10 +24,9 @@ public class ProductService {
         if (optionalProduct.isPresent()) {
             Product product = optionalProduct.get();
 
-            // Add logic to create a withdrawal for the given product
+            // logic to create a withdrawal for the given product
             // Update the product balance, create a withdrawal record, etc.
 
-            // For example:
             BigDecimal currentBalance = product.getCurrentBalance();
             if (currentBalance.compareTo(withdrawalAmount) >= 0) {
                 BigDecimal newBalance = currentBalance.subtract(withdrawalAmount);
@@ -36,16 +35,13 @@ public class ProductService {
                 productRepository.save(product);
             } else {
                 // Handle insufficient balance error or throw an exception
-                // For simplicity, this example doesn't handle various edge cases
             }
 
             return product; // Return the updated product
         } else {
             // Handle product not found error or throw an exception
-            // For simplicity, this example doesn't handle various edge cases
             return null;
         }
     }
 
-    // Other methods...
 }
