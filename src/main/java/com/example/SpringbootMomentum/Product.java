@@ -17,8 +17,6 @@ public class Product {
     private String name;
     private BigDecimal currentBalance;
 
-    // Constructors, getters, and setters
-
     // Constructors
     public Product() {
     }
