@@ -16,8 +16,6 @@ public class Investor {
     private String address;
     private String contact;
 
-    // Constructors, getters, and setters
-
     // Constructors
     public Investor() {
     }
