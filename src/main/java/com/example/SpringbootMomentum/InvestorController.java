@@ -28,7 +28,5 @@ public class InvestorController {
         return investor.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
-    // Other endpoints for investor operations
 }
 
