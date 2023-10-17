@@ -19,12 +19,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/public/**").permitAll() // Allow public access
+                .antMatchers("/public/**").permitAll() // public access
                 .anyRequest().authenticated()
                 .and()
             .httpBasic()
                 .and()
-            .csrf().disable(); // Disable CSRF for simplicity, you might want to enable it in production
+            .csrf().disable();
     }
 
     @Bean
